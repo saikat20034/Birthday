@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet">
+  <style>
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      20% { transform: translateX(-100%); }
+      40% { transform: translateX(-200%); }
+      60% { transform: translateX(-300%); }
+      80% { transform: translateX(-400%); }
+      100% { transform: translateX(0); }
+    }
+
+    .slider {
+      display: flex;
+      animation: slide 40s infinite;
+    }
+
+    @media (max-width: 768px) {
+      .slider img {
+        height: auto;
+      }
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    /* Cake styling */
+    .cake {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(to bottom, #ffcccb, #f9b6b6);
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .cake::before {
+      content: '🎂';
+      font-size: 3rem;
+    }
+
+    .cake .name {
+      position: absolute;
+      top: 30%;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .cake .age {
+      position: absolute;
+      bottom: 20%;
+      font-size: 1rem;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-pink-100 via-pink-300 to-pink-500 flex flex-col items-center">
+  <!-- Navbar -->
+  <nav class="w-full py-4 bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex flex-wrap justify-between items-center px-4">
+      <h1 class="text-2xl font-bold text-pink-500">Happy Birthday</h1>
+      <ul class="flex space-x-4">
+        <li><a href="#message" class="text-pink-500 hover:underline">Message</a></li>
+        <li><a href="#gallery" class="text-pink-500 hover:underline">Gallery</a></li>
+        <li><a href="#timeline" class="text-pink-500 hover:underline">Timeline</a></li>
+        <li><a href="#wishes" class="text-pink-500 hover:underline">Wishes</a></li>
+        <li><a href="#funfacts" class="text-pink-500 hover:underline">Fun Facts</a></li>
+        <li><a href="#favorites" class="text-pink-500 hover:underline">Favorites</a></li>
+        <li><a href="#poem" class="text-pink-500 hover:underline">Poem</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="message" class="text-center py-20 bg-gradient-to-br from-pink-200 to-pink-400 w-full">
+    <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Happy 23rd Birthday, Shetu! 🎉❤️</h1>
+    <p class="text-lg md:text-xl text-white max-w-2xl mx-auto animate-bounce">
+      Every moment with you is a cherished memory. Today I celebrate the wonderful person you are. Here’s to you, my forever love!
+    </p>
+  </section>
+
+  <!-- Cake Section -->
+  <section id="cake" class="py-16 bg-white w-full text-center">
+    <h2 class="text-3xl font-semibold text-pink-700 mb-10">A Special Cake for My Special Love</h2>
+    <div class="cake mx-auto mb-6">
+      <div class="name">Shetu</div>
+      <div class="age">23rd Birthday</div>
+    </div>
+    <p class="text-lg text-gray-700">Here’s a sweet cake to celebrate your 23rd birthday! I hope it’s as sweet as your smile. 🎂</p>
+  </section>
+
+  <!-- Photo Gallery with Slider -->
+  <section id="gallery" class="w-full max-w-6xl py-16 px-4">
+    <h2 class="text-3xl font-semibold text-center text-pink-700 mb-10">Our Beautiful Memories</h2>
+    <div class="overflow-hidden relative w-full">
+      <div class="slider">
+        <img src="./images/7.jpg" alt="Photo 1" class="w-full h-64 object-cover">
+
+        <img src="./images/5.jpg" alt="Photo 3" class="w-full h-64 object-cover">
+        <img src="./images/6.jpg" alt="Photo 4" class="w-full h-64 object-cover">
+        <img src="./images/4.jpg" alt="Photo 5" class="w-full h-64 object-cover">
+        <img src="./images/3.jpg" alt="Photo 6" class="w-full h-64 object-cover">
+        <img src="./images/8.jpg" alt="Photo 7" class="w-full h-64 object-cover">
+        <img src="./images/17.jpg" alt="Photo 8" class="w-full h-64 object-cover">
+        <img src="./images/18.jpg" alt="Photo 9" class="w-full h-64 object-cover">
+        <img src="./images/13.jpg" alt="Photo 10" class="w-full h-64 object-cover">
+        <img src="./images/14.jpg" alt="Photo 11" class="w-full h-64 object-cover">
+        <img src="./images/15.jpg" alt="Photo 12" class="w-full h-64 object-cover">
+        <img src="./images/16.jpg" alt="Photo 13" class="w-full h-64 object-cover">
+        <img src="./images/10.jpg" alt="Photo 14" class="w-full h-64 object-cover">
+        <img src="./images/11.jpg" alt="Photo 15" class="w-full h-64 object-cover">
+        <img src="./images/12.jpg" alt="Photo 16" class="w-full h-64 object-cover">
+        <img src="./images/9.jpg" alt="Photo 17" class="w-full h-64 object-cover">
+        <img src="./images/1.jpg" alt="Photo 18" class="w-full h-64 object-cover">
+        <img src="./images/2.jpg" alt="Photo 19" class="w-full h-64 object-cover">
+        <img src="./images/5.jpg" alt="Photo 20" class="w-full h-64 object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="py-16 bg-pink-100 w-full">
+    <h2 class="text-3xl font-semibold text-center text-pink-700 mb-10">Our Journey Together</h2>
+    <div class="max-w-4xl mx-auto space-y-8 px-4 md:px-0">
+      <div class="p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-xl font-bold text-pink-500">First Meeting</h3>
+        <p class="text-gray-700">The day our eyes met, everything changed. I'll never forget the first time I saw you.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-xl font-bold text-pink-500">First Date</h3>
+        <p class="text-gray-700">Our first date was magical, and it felt like the start of something beautiful.</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-xl font-bold text-pink-500">Our Milestones</h3>
+        <p class="text-gray-700">Every milestone we hit together made us stronger and closer. Here's to more memories ahead!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wishes Section -->
+ <!-- Wishes Section -->
+<section id="wishes" class="py-16 bg-gradient-to-br from-pink-300 to-pink-500 text-white w-full">
+  <h2 class="text-3xl font-semibold text-center mb-10">A Special Wish for You, My Love</h2>
+  <div class="max-w-4xl mx-auto text-center space-y-6 px-4 md:px-0">
+    <blockquote class="p-6 bg-white text-gray-800 rounded-lg shadow-md">
+      <p class="text-lg md:text-xl font-serif">
+        "To the most beautiful soul, Shetu, on your 23rd birthday. You light up my life with your love, your laughter, and your kindness. I am truly blessed to have you by my side. Every moment with you is a treasure, and today, I want to remind you how deeply loved you are. May this year bring you all the happiness you deserve and more. Happy Birthday, my forever love!"
+      </p>
+    </blockquote>
+    <footer class="mt-4 text-lg text-pink-100">
+      <p>- With all my love, your forever companion</p>
+    </footer>
+  </div>
+</section>
+
+
+  <!-- Fun Facts Section -->
+  <section id="funfacts" class="py-16 bg-white w-full">
+    <h2 class="text-3xl font-semibold text-center text-pink-700 mb-10">Fun Facts About You</h2>
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-0">
+      <div class="p-6 bg-pink-100 rounded-lg shadow-md">
+        <h3 class="text-lg font-bold text-pink-600">Favorite Food</h3>
+        <p class="text-gray-700">পানি পুরি is always a winner!</p>
+      </div>
+      <div class="p-6 bg-pink-100 rounded-lg shadow-md">
+        <h3 class="text-lg font-bold text-pink-600">Hobbies</h3>
+        <p class="text-gray-700">Painting, gardening, and traveling with hubby .</p>
+      </div>
+      <div class="p-6 bg-pink-100 rounded-lg shadow-md">
+        <h3 class="text-lg font-bold text-pink-600">Secret Talent</h3>
+        <p class="text-gray-700">Angry bird!</p>
+      </div>
+      <div class="p-6 bg-pink-100 rounded-lg shadow-md">
+        <h3 class="text-lg font-bold text-pink-600">Most Loved By</h3>
+        <p class="text-gray-700">আব্বু , সৎ মা ,(......)!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Favorites Section -->
+  <section id="favorites" class="py-16 bg-pink-200 w-full">
+    <h2 class="text-3xl font-semibold text-center text-pink-700 mb-10">Your Favorites</h2>
+    <div class="max-w-4xl mx-auto space-y-8 px-4 md:px-0">
+      <div class="p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-xl font-bold text-pink-500">Favorite Song</h3>
+        <p class="text-gray-700">"বিছানা-পাতি বিছাইয়া" by Saikat .</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-xl font-bold text-pink-500">Favorite Work</h3>
+        <p class="text-gray-700">"সারাদিন তাকে নিয়ে ঘুরো,অনেক অনেক পানি-পুরি,ভেলপুরি,চটপটি,ঝালমুড়ি,আইসক্রিম,কাচ্চি খাওয়াও!</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-xl font-bold text-pink-500">Dream Destination</h3>
+        <p class="text-gray-700">Jannah.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Poem Section -->
+  <section id="poem" class="py-16 bg-gradient-to-br from-pink-400 to-pink-600 text-white w-full">
+    <h2 class="text-3xl font-semibold text-center mb-10">A Poem for You</h2>
+    <div class="max-w-3xl mx-auto text-center px-4">
+      <p class="text-lg leading-relaxed">
+        Roses are red, violets are blue,<br>
+        Every moment is special, spent with you.<br>
+        Your smile lights up the darkest night,<br>
+        You are my star, my guiding light.<br><br>
+        On this day, I celebrate your birth,<br>
+        The most wonderful person on this Earth.<br>
+        Happy Birthday, my love so true,<br>
+        My world is complete, because of you.
+      </p>
+    </div>
+  </section>
+  <!-- Engagement and Marriage Section -->
+<section id="engagement-marriage" class="py-16 bg-gradient-to-br from-purple-200 to-purple-400 text-white w-full">
+  <h2 class="text-3xl font-semibold text-center mb-10">Our Beautiful Journey Together</h2>
+  <div class="max-w-4xl mx-auto text-center space-y-6 px-4 md:px-0">
+    <div class="bg-white text-gray-800 rounded-lg shadow-lg p-8">
+      <h3 class="text-2xl font-bold text-purple-700 mb-4">Our Engagement</h3>
+      <p class="text-lg">On May 10th, 2024, we took the first step towards a lifetime of love and happiness. Our engagement marked the beginning of this beautiful journey together, and I couldn't be more excited for what the future holds for us.</p>
+      <p class="text-lg mt-4 font-semibold">Engagement Date: <span class="text-purple-600">May 10, 2024</span></p>
+    </div>
+    <div class="bg-white text-gray-800 rounded-lg shadow-lg p-8">
+      <h3 class="text-2xl font-bold text-purple-700 mb-4">Our Wedding Day</h3>
+      <p class="text-lg">On January 10th, 2025, we will say "I do" and begin a new chapter as husband and wife. I can't wait to celebrate our love and start this amazing journey together.</p>
+      <p class="text-lg mt-4 font-semibold">Wedding Date: <span class="text-purple-600">January 10, 2025</span></p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+ <!-- Footer -->
+<footer class="py-12 bg-pink-700 text-white w-full">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Footer top section with message -->
+    <div class="text-center mb-6">
+      <p class="text-lg md:text-xl font-semibold">
+        Made with ❤️ just for you, Shetu. Thank you for being the most amazing part of my life.
+      </p>
+    </div>
+
+    <!-- Footer middle section with quick links -->
+    <div class="flex justify-center space-x-8 mb-6">
+      <a href="#message" class="text-white hover:text-pink-300">Message</a>
+      <a href="#gallery" class="text-white hover:text-pink-300">Gallery</a>
+      <a href="#timeline" class="text-white hover:text-pink-300">Timeline</a>
+      <a href="#wishes" class="text-white hover:text-pink-300">Wishes</a>
+      <a href="#funfacts" class="text-white hover:text-pink-300">Fun Facts</a>
+      <a href="#favorites" class="text-white hover:text-pink-300">Favorites</a>
+      <a href="#poem" class="text-white hover:text-pink-300">Poem</a>
+    </div>
+
+    <!-- Footer bottom section with social media links -->
+    <div class="text-center">
+      <p class="text-sm mb-4">Follow Us:</p>
+      <div class="flex justify-center space-x-6">
+        <a href="#" class="text-white hover:text-pink-300">
+          <i class="fab fa-facebook-f text-lg"></i> Facebook
+        </a>
+        <a href="#" class="text-white hover:text-pink-300">
+          <i class="fab fa-twitter text-lg"></i> Twitter
+        </a>
+        <a href="#" class="text-white hover:text-pink-300">
+          <i class="fab fa-instagram text-lg"></i> Instagram
+        </a>
+        <a href="#" class="text-white hover:text-pink-300">
+          <i class="fab fa-linkedin-in text-lg"></i> LinkedIn
+        </a>
+      </div>
+
+      <div class="mt-6 text-sm text-gray-300">
+        <p>&copy; 2024 All Rights Reserved. Designed with love for Shetu.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
